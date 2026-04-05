@@ -1,0 +1,46 @@
+.outer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
+.label {
+    padding: var(--spacing-3) var(--spacing-6);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-neutral-500);
+    background: var(--color-neutral-50);
+    border-bottom: 1px solid var(--color-neutral-200);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.canvas {
+    flex: 1;
+    overflow: auto;
+    background-image: radial-gradient(circle, var(--color-neutral-300) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-color: var(--color-neutral-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-10);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    color: var(--color-danger-600);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    background: var(--color-danger-50);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-md);
+}

@@ -1,0 +1,41 @@
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.size-sm {
+    width: 16px;
+    height: 16px;
+}
+
+.size-md {
+    width: 24px;
+    height: 24px;
+}
+
+.size-lg {
+    width: 32px;
+    height: 32px;
+}
+
+.size-xl {
+    width: 48px;
+    height: 48px;
+}
+
+.track {
+    opacity: 0.25;
+}
+
+.head {
+    opacity: 0.75;
+}

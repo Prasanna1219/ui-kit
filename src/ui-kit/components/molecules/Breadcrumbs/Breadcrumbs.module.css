@@ -1,0 +1,58 @@
+.root {
+    font-family: var(--font-sans);
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.separator {
+    color: var(--color-neutral-400);
+    display: flex;
+    align-items: center;
+}
+
+.link,
+.button {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-neutral-600);
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    transition: color var(--transition-fast);
+}
+
+.link:hover,
+.button:hover {
+    color: var(--color-primary-600);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.link:focus-visible,
+.button:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+.item[aria-current="page"] .text {
+    color: var(--color-neutral-900);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+}

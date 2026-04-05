@@ -1,0 +1,43 @@
+.group {
+    display: inline-flex;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal>* {
+    border-radius: 0;
+}
+
+.horizontal>*:first-child {
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+.horizontal>*:last-child {
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.horizontal>*:not(:last-child) {
+    border-right-width: 0.75px;
+}
+
+.vertical>* {
+    border-radius: 0;
+}
+
+.vertical>*:first-child {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.vertical>*:last-child {
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.vertical>*:not(:last-child) {
+    border-bottom-width: 0.75px;
+}

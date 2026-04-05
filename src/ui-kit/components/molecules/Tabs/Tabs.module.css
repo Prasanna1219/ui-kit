@@ -1,0 +1,82 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: var(--font-sans);
+}
+
+.tabList {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.tabBtn {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    color: var(--color-neutral-600);
+}
+
+.tabBtn.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Variant: Line */
+.variant-line .tabList {
+    border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.variant-line .tabBtn {
+    padding: var(--spacing-3) var(--spacing-4);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+}
+
+.variant-line .tabBtn:hover:not(.disabled) {
+    color: var(--color-neutral-900);
+}
+
+.variant-line .tabBtn.active {
+    color: var(--color-primary-600);
+    border-bottom-color: var(--color-primary-600);
+}
+
+/* Variant: Pills */
+.variant-pills .tabBtn {
+    padding: var(--spacing-2) var(--spacing-4);
+    border-radius: var(--radius-full);
+}
+
+.variant-pills .tabBtn:hover:not(.disabled) {
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-900);
+}
+
+.variant-pills .tabBtn.active {
+    background: var(--color-primary-500);
+    color: #fff;
+}
+
+.tabContent {
+    padding: var(--spacing-4) 0;
+}
+
+.tabPanel {
+    animation: fadeIn var(--transition-fast) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

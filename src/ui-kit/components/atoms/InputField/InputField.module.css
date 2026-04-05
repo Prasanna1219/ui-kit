@@ -1,0 +1,108 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+    width: 100%;
+}
+
+.label {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-neutral-700);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--color-neutral-50);
+    border: 1.5px solid var(--color-neutral-300);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    overflow: hidden;
+}
+
+.wrapper:focus-within {
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.hasError {
+    border-color: var(--color-danger-500);
+}
+
+.hasError:focus-within {
+    box-shadow: 0 0 0 3px var(--color-danger-100);
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.size-sm .input {
+    height: 32px;
+    font-size: var(--font-size-sm);
+    padding: 0 var(--spacing-3);
+}
+
+.size-md .input {
+    height: 40px;
+    font-size: var(--font-size-base);
+    padding: 0 var(--spacing-4);
+}
+
+.size-lg .input {
+    height: 48px;
+    font-size: var(--font-size-lg);
+    padding: 0 var(--spacing-4);
+}
+
+.input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: var(--font-sans);
+    color: var(--color-neutral-900);
+    min-width: 0;
+    height: 40px;
+    padding: 0 var(--spacing-4);
+    font-size: var(--font-size-base);
+}
+
+.input::placeholder {
+    color: var(--color-neutral-400);
+}
+
+.input:disabled {
+    cursor: not-allowed;
+}
+
+.addon {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-3);
+    color: var(--color-neutral-500);
+    font-size: var(--font-size-sm);
+    background: var(--color-neutral-100);
+    height: 100%;
+    border-right: 1.5px solid var(--color-neutral-200);
+    flex-shrink: 0;
+}
+
+.addonRight {
+    border-right: none;
+    border-left: 1.5px solid var(--color-neutral-200);
+}
+
+.error {
+    font-size: var(--font-size-sm);
+    color: var(--color-danger-600);
+    font-family: var(--font-sans);
+}
+
+.helper {
+    font-size: var(--font-size-sm);
+    color: var(--color-neutral-500);
+    font-family: var(--font-sans);
+}

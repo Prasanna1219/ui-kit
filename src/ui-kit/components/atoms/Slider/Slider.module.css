@@ -1,0 +1,108 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-2);
+    font-family: var(--font-sans);
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-sm);
+    color: var(--color-neutral-700);
+    font-weight: var(--font-weight-medium);
+}
+
+.label {
+    cursor: pointer;
+}
+
+.value {
+    color: var(--color-neutral-500);
+}
+
+.trackContainer {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    margin: 0;
+    outline: none;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Track Styling */
+.input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(to right, var(--color-primary-500) var(--slider-fill, 50%), var(--color-neutral-200) var(--slider-fill, 50%));
+}
+
+.input::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(to right, var(--color-primary-500) var(--slider-fill, 50%), var(--color-neutral-200) var(--slider-fill, 50%));
+}
+
+/* Thumb Styling */
+.input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-full);
+    background: #fff;
+    border: 2px solid var(--color-primary-500);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    margin-top: -7px;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: var(--radius-full);
+    background: #fff;
+    border: 2px solid var(--color-primary-500);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input:focus-visible::-webkit-slider-thumb {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 4px var(--color-primary-100);
+}
+
+.input:focus-visible::-moz-range-thumb {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 4px var(--color-primary-100);
+}
+
+.input:active::-webkit-slider-thumb {
+    transform: scale(1.15);
+}
+
+.input:active::-moz-range-thumb {
+    transform: scale(1.15);
+}

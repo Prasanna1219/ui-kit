@@ -1,0 +1,104 @@
+.menubar {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    height: 56px;
+    padding: 0 var(--spacing-6);
+    background: var(--color-neutral-50);
+    border-bottom: 1px solid var(--color-neutral-200);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    z-index: var(--z-dropdown);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: var(--spacing-4);
+    flex-shrink: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    flex: 1;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-left: auto;
+}
+
+.navItem {
+    position: relative;
+}
+
+.navBtn {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-1) var(--spacing-3);
+    height: 36px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-neutral-700);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.navBtn:hover,
+.navBtnActive {
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-900);
+}
+
+.submenu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    min-width: 180px;
+    background: var(--color-neutral-50);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    animation: dropIn 150ms ease;
+    z-index: var(--z-dropdown);
+}
+
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.submenuItem {
+    display: block;
+    width: 100%;
+    padding: var(--spacing-2) var(--spacing-4);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    color: var(--color-neutral-700);
+    text-align: left;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.submenuItem:hover {
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-900);
+}

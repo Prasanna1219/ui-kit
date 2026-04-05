@@ -1,0 +1,101 @@
+.root {
+    position: relative;
+    width: 100%;
+    font-family: var(--font-sans);
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.trigger {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-4);
+    background: var(--color-neutral-50);
+    border: 1.5px solid var(--color-neutral-300);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.trigger:hover {
+    border-color: var(--color-neutral-400);
+}
+
+.open {
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.trigger:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+}
+
+.value {
+    color: var(--color-neutral-900);
+}
+
+.placeholder {
+    color: var(--color-neutral-400);
+}
+
+.chevron {
+    transition: transform var(--transition-fast);
+    color: var(--color-neutral-500);
+    flex-shrink: 0;
+}
+
+.chevronUp {
+    transform: rotate(180deg);
+}
+
+.menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: var(--color-neutral-50);
+    border: 1.5px solid var(--color-neutral-200);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    z-index: var(--z-dropdown);
+    overflow: hidden;
+    animation: dropIn 150ms ease forwards;
+}
+
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.option {
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    color: var(--color-neutral-800);
+    transition: background var(--transition-fast);
+}
+
+.option:hover {
+    background: var(--color-neutral-100);
+}
+
+.selected {
+    background: var(--color-primary-50);
+    color: var(--color-primary-700);
+    font-weight: var(--font-weight-medium);
+}
